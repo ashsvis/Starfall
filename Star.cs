@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -9,8 +10,6 @@ namespace WindowsFormsApp1
 
         public Star(int x, int y)
         {
-            Location = new Point(x, y);
-
             int n = 5;
             double alpha = 0;
             double a = alpha, da = Math.PI / n, l;
@@ -19,12 +18,15 @@ namespace WindowsFormsApp1
             for (int k = 0; k < 2 * n + 1; k++)
             {
                 l = k % 2 == 0 ? r : R;
-                points[k] = new PointF((float)(Location.X + l * Math.Cos(a)), (float)(Location.Y + l * Math.Sin(a)));
+                points[k] = new PointF((float)(x + l * Math.Cos(a)), (float)(y + l * Math.Sin(a)));
                 a += da;
             }
         }
 
-        public Point Location { get; set; }
+        public PointF Location 
+        {
+            get { return new PointF(points.Min(p => p.X), points.Min(p => p.Y)); }
+        }
 
         public void Draw(Graphics gr)
         {
