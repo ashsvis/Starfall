@@ -30,5 +30,11 @@ namespace WindowsFormsApp1
         {
             gr.DrawLines(Pens.White, points);
         }
+
+        public void PutDown()
+        {
+            for (var i = 0; i < points.Length; i++)
+                points[i].Y += 1;
+        }
     }
 }
