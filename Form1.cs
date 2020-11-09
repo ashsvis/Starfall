@@ -15,23 +15,10 @@ namespace WindowsFormsApp1
             timer1.Enabled = true;
         }
 
-        void DrawStar(Graphics gr, double x, double y)
+        void DrawStar(Graphics gr, int x, int y)
         {
-            int n = 5;
-            double R = 10, r = 5;
-            double alpha = 0;
-
-            PointF[] points = new PointF[2 * n + 1];
-            double a = alpha, da = Math.PI / n, l;
-            
-            for (int k = 0; k < 2 * n + 1; k++)
-            {
-                l = k % 2 == 0 ? r : R;
-                points[k] = new PointF((float)(x + l * Math.Cos(a)), (float)(y + l * Math.Sin(a)));
-                a += da;
-            }
-            gr.DrawLines(Pens.White, points);
-
+            var star = new Star(x, y);
+            star.Draw(gr);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -50,7 +37,6 @@ namespace WindowsFormsApp1
                 y = r.Next(pictureBox1.Height);
                 DrawStar(e.Graphics, x, y);
             }
-
         }
     }
 }
