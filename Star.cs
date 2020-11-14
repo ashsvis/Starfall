@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Linq;
 
-namespace WindowsFormsApp1
+namespace StarFall
 {
     public class Star
     {

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace StarFall
 {
     partial class Form1
     {

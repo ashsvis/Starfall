@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1.csproj", "{4B9809C8-F7DE-4248-8E50-B4BBE8A17CD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarFall", "StarFall.csproj", "{4B9809C8-F7DE-4248-8E50-B4BBE8A17CD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

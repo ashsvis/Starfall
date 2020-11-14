@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace StarFall
 {
     public partial class Form1 : Form
     {
